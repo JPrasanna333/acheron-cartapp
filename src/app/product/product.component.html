@@ -1,0 +1,27 @@
+
+
+<div class="row">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Price</th>
+                <th>Color</th>
+                <th>Stock</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of Products$ | async">
+               <td>{{p.Id}}</td>
+               <td>{{p.Title}}</td>
+               <td>{{p.Price}}</td>
+               <td>{{p.Color}}</td>
+               <td>{{p.Stock}}</td>
+               <td><button class="btn btn-info" (click)="addToCart(p)">Add to Cart</button></td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
